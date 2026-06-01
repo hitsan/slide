@@ -1,0 +1,15 @@
+{
+  "name": "slidev-theme-template",
+  "version": "0.0.1",
+  "keywords": ["slidev-theme"],
+  "slidev": {
+    "defaults": {
+      "colorSchema": "light",
+      "transition": "fade",
+      "fonts": {
+        "sans": "Inter",
+        "mono": "Fira Code"
+      }
+    }
+  }
+}
