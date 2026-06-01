@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "@slidev/cli": "^0.50.0",
-    "@slidev/theme-default": "latest"
+    "@slidev/theme-default": "latest",
+    "chart.js": "^4.5.1",
+    "vue-chartjs": "^5.3.3"
   }
 }
