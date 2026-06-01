@@ -598,6 +598,15 @@
   font-size: 1.1rem;
 }
 
+/* ── Images ─────────────────────────────────────────────────── */
+.slidev-layout img {
+  max-width: 100%;
+  max-height: 430px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ── Misc ───────────────────────────────────────────────────── */
 #slidev-goto-dialog {
   display: none !important;
