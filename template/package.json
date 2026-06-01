@@ -7,7 +7,7 @@
       "colorSchema": "light",
       "transition": false,
       "fonts": {
-        "sans": "Inter",
+        "sans": "Noto Sans JP",
         "mono": "Fira Code"
       }
     }

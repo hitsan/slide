@@ -89,6 +89,10 @@
   color: var(--slidev-theme-primary);
 }
 
+.slidev-layout.default strong {
+  color: #06b6d4;
+}
+
 .slidev-layout.default blockquote {
   border-left-color: var(--slidev-theme-primary);
 }
@@ -125,7 +129,7 @@
 /* ── Code blocks ────────────────────────────────────────────── */
 .slidev-layout .shiki {
   border-radius: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 /* ── Misc ───────────────────────────────────────────────────── */
