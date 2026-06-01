@@ -5,7 +5,7 @@
   "slidev": {
     "defaults": {
       "colorSchema": "light",
-      "transition": "fade",
+      "transition": false,
       "fonts": {
         "sans": "Inter",
         "mono": "Fira Code"
