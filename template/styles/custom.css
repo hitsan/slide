@@ -51,7 +51,7 @@
 .slidev-layout.cover h1 + p,
 .slidev-layout.intro h1 + p {
   color: #6366f1 !important;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 500;
   opacity: 1 !important;
 }
@@ -146,7 +146,7 @@
 
 .slidev-layout.cards .cards-header p {
   color: #475569;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 0;
 }
 
@@ -161,7 +161,7 @@
 .slidev-layout.cards .card {
   background: #eef2ff;
   border-radius: 0.75rem;
-  padding: 1.5rem 1.25rem;
+  padding: 0.75rem 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -170,15 +170,16 @@
 
 .slidev-layout.cards .card h2 {
   color: var(--slidev-theme-primary);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.15rem;
 }
 
 .slidev-layout.cards .card p {
   color: #475569;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1.6;
+  margin-top: 0;
 }
 
 /* ── Two-col layout ─────────────────────────────────────────── */
@@ -201,7 +202,7 @@
 
 .slidev-layout.two-col .two-col-header p {
   color: #475569;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 0;
 }
 
@@ -216,7 +217,7 @@
 .slidev-layout.two-col .col {
   background: #eef2ff;
   border-radius: 0.75rem;
-  padding: 1.5rem 1.25rem;
+  padding: 0.75rem 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -225,15 +226,16 @@
 
 .slidev-layout.two-col .col h2 {
   color: var(--slidev-theme-primary);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.15rem;
 }
 
 .slidev-layout.two-col .col p {
   color: #475569;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1.6;
+  margin-top: 0;
 }
 
 /* ── Two-col-icon layout ────────────────────────────────────── */
@@ -256,7 +258,7 @@
 
 .slidev-layout.two-col-icon .two-col-header p {
   color: #475569;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 0;
 }
 
@@ -271,7 +273,7 @@
 .slidev-layout.two-col-icon .col {
   background: #eef2ff;
   border-radius: 0.75rem;
-  padding: 1.5rem 1.25rem;
+  padding: 0.75rem 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -296,15 +298,16 @@
 
 .slidev-layout.two-col-icon .col h2 {
   color: var(--slidev-theme-primary);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.15rem;
 }
 
 .slidev-layout.two-col-icon .col p {
   color: #475569;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1.6;
+  margin-top: 0;
 }
 
 /* ── Cards-icon layout ──────────────────────────────────────── */
@@ -327,7 +330,7 @@
 
 .slidev-layout.cards-icon .cards-header p {
   color: #475569;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 0;
 }
 
@@ -342,7 +345,7 @@
 .slidev-layout.cards-icon .card {
   background: #eef2ff;
   border-radius: 0.75rem;
-  padding: 1.5rem 1.25rem;
+  padding: 0.75rem 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -367,15 +370,16 @@
 
 .slidev-layout.cards-icon .card h2 {
   color: var(--slidev-theme-primary);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.15rem;
 }
 
 .slidev-layout.cards-icon .card p {
   color: #475569;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1.6;
+  margin-top: 0;
 }
 
 /* ── Grid 2x2 layout ────────────────────────────────────────── */
@@ -401,7 +405,7 @@
 .slidev-layout.grid2x2 .grid-header p,
 .slidev-layout.grid2x2-icon .grid-header p {
   color: #475569;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 0;
 }
 
@@ -418,7 +422,7 @@
 .slidev-layout.grid2x2-icon .cell {
   background: #eef2ff;
   border-radius: 0.75rem;
-  padding: 1rem 1.25rem;
+  padding: 0.5rem 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -443,16 +447,17 @@
 .slidev-layout.grid2x2 .cell h2,
 .slidev-layout.grid2x2-icon .cell h2 {
   color: var(--slidev-theme-primary);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.15rem;
 }
 
 .slidev-layout.grid2x2 .cell p,
 .slidev-layout.grid2x2-icon .cell p {
   color: #475569;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   line-height: 1.6;
+  margin-top: 0;
 }
 
 /* ── List / List-icon layout ────────────────────────────────── */
@@ -491,7 +496,7 @@
   gap: 1.25rem;
   background: #eef2ff;
   border-radius: 0.75rem;
-  padding: 0.9rem 1.25rem;
+  padding: 0.5rem 1.5rem;
   flex: 1;
 }
 
@@ -518,16 +523,72 @@
 .slidev-layout.list .list-content h2,
 .slidev-layout.list-icon .list-content h2 {
   color: var(--slidev-theme-primary);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
 
 .slidev-layout.list .list-content p,
 .slidev-layout.list-icon .list-content p {
   color: #475569;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Compare layout ─────────────────────────────────────────── */
+.slidev-layout.compare {
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.slidev-layout.compare .compare-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  border-left: 5px solid var(--slidev-theme-primary);
+  padding-left: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.slidev-layout.compare .compare-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+  flex: 1;
+}
+
+.slidev-layout.compare .compare-col {
+  background: #eef2ff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 2rem;
+}
+
+.slidev-layout.compare .compare-col h2 {
+  color: var(--slidev-theme-primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.slidev-layout.compare .compare-col p,
+.slidev-layout.compare .compare-col li {
+  color: #475569;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+.slidev-layout.compare .compare-bottom {
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+
+.slidev-layout.compare .compare-bottom p {
   margin: 0;
 }
 
