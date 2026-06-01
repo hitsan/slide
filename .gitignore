@@ -3,6 +3,7 @@ dist/
 .slidev/
 .direnv/
 .envrc
+works/
 
 # npm
 package-lock.json
