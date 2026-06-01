@@ -106,10 +106,3 @@ works/<topic>/images/
 - **フォント**: Noto Sans JP（本文）、Fira Code（コード）
 - **モード**: ライトモード固定
 
-## プレビュー確認
-
-全レイアウトのサンプルは `works/preview/slides.md` を参照。
-
-```bash
-npm run dev works/preview/slides.md
-```
