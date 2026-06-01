@@ -181,6 +181,203 @@
   line-height: 1.6;
 }
 
+/* ── Two-col layout ─────────────────────────────────────────── */
+.slidev-layout.two-col {
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.slidev-layout.two-col .two-col-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  border-left: 5px solid var(--slidev-theme-primary);
+  padding-left: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.slidev-layout.two-col .two-col-header p {
+  color: #475569;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.slidev-layout.two-col .two-col-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  flex: 1;
+}
+
+.slidev-layout.two-col .col {
+  background: #eef2ff;
+  border-radius: 0.75rem;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slidev-layout.two-col .col h2 {
+  color: var(--slidev-theme-primary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.slidev-layout.two-col .col p {
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ── Two-col-icon layout ────────────────────────────────────── */
+.slidev-layout.two-col-icon {
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.slidev-layout.two-col-icon .two-col-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  border-left: 5px solid var(--slidev-theme-primary);
+  padding-left: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.slidev-layout.two-col-icon .two-col-header p {
+  color: #475569;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.slidev-layout.two-col-icon .two-col-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  flex: 1;
+}
+
+.slidev-layout.two-col-icon .col {
+  background: #eef2ff;
+  border-radius: 0.75rem;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slidev-layout.two-col-icon .col-icon {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.slidev-layout.two-col-icon .col-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slidev-layout.two-col-icon .col h2 {
+  color: var(--slidev-theme-primary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.slidev-layout.two-col-icon .col p {
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ── Cards-icon layout ──────────────────────────────────────── */
+.slidev-layout.cards-icon {
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.slidev-layout.cards-icon .cards-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  border-left: 5px solid var(--slidev-theme-primary);
+  padding-left: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.slidev-layout.cards-icon .cards-header p {
+  color: #475569;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.slidev-layout.cards-icon .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  flex: 1;
+}
+
+.slidev-layout.cards-icon .card {
+  background: #eef2ff;
+  border-radius: 0.75rem;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slidev-layout.cards-icon .card-icon {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.slidev-layout.cards-icon .card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slidev-layout.cards-icon .card h2 {
+  color: var(--slidev-theme-primary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.slidev-layout.cards-icon .card p {
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 /* ── Code blocks ────────────────────────────────────────────── */
 .slidev-layout .shiki {
   border-radius: 0.5rem;
