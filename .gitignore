@@ -3,3 +3,15 @@ dist/
 .slidev/
 .direnv/
 .envrc
+
+# npm
+package-lock.json
+npm-debug.log*
+
+# logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
