@@ -60,6 +60,7 @@
 .slidev-layout.default {
   background: #ffffff;
   color: #1e293b;
+  font-size: 1.4rem;
 }
 
 .slidev-layout.default h1 {
@@ -74,6 +75,14 @@
 .slidev-layout.default h2 {
   color: #334155;
   font-weight: 600;
+}
+
+.slidev-layout.default li li {
+  font-size: 0.88em;
+}
+
+.slidev-layout.default li li li {
+  font-size: 0.88em;
 }
 
 .slidev-layout.default a {
