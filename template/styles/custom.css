@@ -734,6 +734,94 @@
   border-radius: 0.5rem;
 }
 
+/* ── Two-charts / Two-images layout ────────────────────────── */
+.slidev-layout.two-charts,
+.slidev-layout.two-images {
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.slidev-layout.two-charts .two-charts-header h1,
+.slidev-layout.two-images .two-images-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  border-left: 5px solid var(--slidev-theme-primary);
+  padding-left: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.slidev-layout.two-charts .two-charts-body,
+.slidev-layout.two-images .two-images-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  flex: 1;
+  align-items: center;
+}
+
+.slidev-layout.two-charts .two-charts-item,
+.slidev-layout.two-images .two-images-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slidev-layout.two-images .two-images-item img {
+  max-width: 100%;
+  max-height: 360px;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* ── Chart-image layout ─────────────────────────────────────── */
+.slidev-layout.chart-image {
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.slidev-layout.chart-image .chart-image-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  border-left: 5px solid var(--slidev-theme-primary);
+  padding-left: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.slidev-layout.chart-image .chart-image-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  flex: 1;
+  align-items: center;
+}
+
+.slidev-layout.chart-image .chart-image-chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slidev-layout.chart-image .chart-image-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slidev-layout.chart-image .chart-image-figure img {
+  max-width: 100%;
+  max-height: 360px;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
 /* ── Code blocks ────────────────────────────────────────────── */
 .slidev-layout .shiki {
   border-radius: 0.5rem;
