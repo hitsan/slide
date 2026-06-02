@@ -162,10 +162,10 @@
   background: #f0f9ff;
   border-radius: 0.75rem;
   padding: 0.75rem 1rem;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .slidev-layout.cards .card h2 {
@@ -173,6 +173,8 @@
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0.15rem;
+  width: 100%;
+  text-align: center;
 }
 
 .slidev-layout.cards .card p {
@@ -218,10 +220,10 @@
   background: #f0f9ff;
   border-radius: 0.75rem;
   padding: 0.75rem 1rem;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .slidev-layout.two-col .col h2 {
@@ -229,6 +231,8 @@
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0.15rem;
+  width: 100%;
+  text-align: center;
 }
 
 .slidev-layout.two-col .col p {
@@ -274,10 +278,10 @@
   background: #f0f9ff;
   border-radius: 0.75rem;
   padding: 0.75rem 1rem;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .slidev-layout.two-col-icon .col-icon {
@@ -301,6 +305,8 @@
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0.15rem;
+  width: 100%;
+  text-align: center;
 }
 
 .slidev-layout.two-col-icon .col p {
@@ -346,10 +352,10 @@
   background: #f0f9ff;
   border-radius: 0.75rem;
   padding: 0.75rem 1rem;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .slidev-layout.cards-icon .card-icon {
@@ -373,6 +379,8 @@
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 0.15rem;
+  width: 100%;
+  text-align: center;
 }
 
 .slidev-layout.cards-icon .card p {
@@ -423,10 +431,10 @@
   background: #f0f9ff;
   border-radius: 0.75rem;
   padding: 0.5rem 0.75rem;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .slidev-layout.grid2x2-icon .cell-icon {
@@ -450,6 +458,8 @@
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.15rem;
+  width: 100%;
+  text-align: center;
 }
 
 .slidev-layout.grid2x2 .cell p,
