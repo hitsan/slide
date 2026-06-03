@@ -19,49 +19,63 @@ npm run export  # PDF エクスポート
 ## ディレクトリ構成
 
 ```
-template/                   # カスタム Slidev テーマ
-  components/Chart.vue      # Chart.js ラッパー（bar/line/pie/doughnut）
+template/                      # カスタム Slidev テーマ
+  components/Chart.vue         # Chart.js ラッパー（bar/line/pie/doughnut）
   composables/useSlotItems.js  # VNode 分割ユーティリティ（レイアウト共通）
-  layouts/                  # カスタムレイアウト（下記参照）
-  styles/custom.css         # テーマスタイル（インジゴ/シアン配色）
-  global-bottom.vue         # 全スライド共通フッター
-  package.json              # テーマメタデータ・フォント設定
+  layouts/                     # カスタムレイアウト（下記参照）
+  styles/custom.css            # テーマスタイル
+  global-bottom.vue            # 全スライド共通フッター
+  package.json                 # テーマメタデータ・フォント設定
 
-works/                      # スライド置き場
-  preview/slides.md         # テンプレート確認用スライド（全レイアウトのサンプル）
+works/                         # スライド置き場
+  preview/slides.md            # テンプレート確認用スライド（全レイアウトのサンプル）
 ```
 
 ## カスタムレイアウト一覧
 
-| レイアウト名 | 説明 | スロット | セパレーター |
-|---|---|---|---|
-| `two-col` | 2カラムカード（アイコン対応） | `cols` | `***` |
-| `cards` | 3カラムカード（アイコン対応） | `items` | `***` |
-| `grid2x2` | 2×2グリッド（アイコン対応） | `items` | `***` |
-| `list` | 縦リスト（アイコン対応） | `items` | `***` |
-| `compare` | 2案比較＋結論 | `cols`（`***`区切り）, `bottom` | `***` |
-| `timeline` | 横並びステップ（番号自動付与） | `steps` | `***` |
+| レイアウト名 | 説明 | スロット |
+|---|---|---|
+| `two-col` | 2カラムカード（アイコン対応） | `cols`（`***` 区切り） |
+| `cards` | 3カラムカード（アイコン対応） | `items`（`***` 区切り） |
+| `grid` | 可変グリッド（アイコン対応） | `items`（`***` 区切り） |
+| `list` | 縦リスト（アイコン対応） | `items`（`***` 区切り） |
+| `compare` | 2案比較＋結論 | `cols`（`***` 区切り）、`bottom` |
+| `timeline` | 横並びステップ（番号自動付与） | `steps`（`***` 区切り） |
+| `image` | 画像＋テキスト（左右2分割） | `content`、`image` |
+| `two-charts` | グラフ2つ並列 | `chart1`、`chart2` |
+| `two-images` | 画像2つ並列 | `image1`、`image2` |
 
-### スロットの書き方
+### grid のカラム数自動計算
+
+| アイテム数 | カラム数 |
+|---|---|
+| 1〜3 | 1〜3列 |
+| 4 | 2列（2×2） |
+| 5以上 | 3列 |
+
+## スロットの書き方
 
 アイコンなし:
 ```md
 ::items::
 ## 見出しA
+
 説明テキスト
 
 ***
 
 ## 見出しB
+
 説明テキスト
 ```
 
-アイコンあり（先頭に `<img>` を置く。**`<img>` の直後に必ず空行**）:
+アイコンあり（先頭に `<img>` を置く。**`<img>` の直後に必ず空行**を入れる）:
 ```md
 ::items::
 <img src="./images/icon.png" />
 
 ## 見出しA
+
 説明テキスト
 
 ***
@@ -69,10 +83,11 @@ works/                      # スライド置き場
 <img src="./images/icon.png" />
 
 ## 見出しB
+
 説明テキスト
 ```
 
-> **注意**: `<img>` の直後に空行なしで `## heading` を書くと、markdown-it が両行を HTML ブロックとして処理し `<h2>` が生成されない。
+> `<img>` の直後に空行なしで `## heading` を書くと、markdown-it が両行を HTML ブロックとして処理し `<h2>` が生成されない。
 
 ## テーマ設計
 
@@ -86,7 +101,7 @@ works/                      # スライド置き場
 ```vue
 <Chart type="bar" :data="{
   labels: [...],
-  datasets: [{ label: '', data: [...], backgroundColor: '#6366f1' }]
+  datasets: [{ label: '', data: [...], backgroundColor: '#0ea5e9' }]
 }" :height="'340px'" />
 ```
 

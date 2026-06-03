@@ -275,8 +275,8 @@
 }
 
 
-/* ── Grid 2x2 layout ────────────────────────────────────────── */
-.slidev-layout.grid2x2 {
+/* ── Grid layout ────────────────────────────────────────────── */
+.slidev-layout.grid {
   background: #ffffff;
   color: #1e293b;
   font-size: 1.4rem;
@@ -284,7 +284,7 @@
   flex-direction: column;
 }
 
-.slidev-layout.grid2x2 .grid-header h1 {
+.slidev-layout.grid .grid-header h1 {
   font-size: 2.2rem;
   font-weight: 700;
   color: #1e293b;
@@ -293,21 +293,20 @@
   margin-bottom: 0.75rem;
 }
 
-.slidev-layout.grid2x2 .grid-header p {
+.slidev-layout.grid .grid-header p {
   color: #475569;
   font-size: 1.2rem;
   margin-bottom: 0;
 }
 
-.slidev-layout.grid2x2 .grid2x2-grid {
+.slidev-layout.grid .grid-body {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 1rem;
   flex: 1;
 }
 
-.slidev-layout.grid2x2 .cell {
+.slidev-layout.grid .cell {
   background: #f0f9ff;
   border-radius: 0.75rem;
   padding: 0.5rem 0.75rem;
@@ -317,7 +316,7 @@
   align-items: flex-start;
 }
 
-.slidev-layout.grid2x2 .cell-icon {
+.slidev-layout.grid .cell-icon {
   width: 3rem;
   height: 3rem;
   margin-bottom: 0.5rem;
@@ -326,13 +325,13 @@
   justify-content: center;
 }
 
-.slidev-layout.grid2x2 .cell-icon img {
+.slidev-layout.grid .cell-icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.slidev-layout.grid2x2 .cell h2 {
+.slidev-layout.grid .cell h2 {
   color: var(--slidev-theme-primary);
   font-size: 1.25rem;
   font-weight: 700;
@@ -341,7 +340,7 @@
   text-align: center;
 }
 
-.slidev-layout.grid2x2 .cell p {
+.slidev-layout.grid .cell p {
   color: #475569;
   font-size: 1.2rem;
   line-height: 1.6;
