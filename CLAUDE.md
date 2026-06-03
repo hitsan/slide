@@ -21,6 +21,7 @@ npm run export  # PDF エクスポート
 ```
 template/                   # カスタム Slidev テーマ
   components/Chart.vue      # Chart.js ラッパー（bar/line/pie/doughnut）
+  composables/useSlotItems.js  # VNode 分割ユーティリティ（レイアウト共通）
   layouts/                  # カスタムレイアウト（下記参照）
   styles/custom.css         # テーマスタイル（インジゴ/シアン配色）
   global-bottom.vue         # 全スライド共通フッター
@@ -32,21 +33,50 @@ works/                      # スライド置き場
 
 ## カスタムレイアウト一覧
 
-| レイアウト名 | 説明 | スロット |
-|---|---|---|
-| `two-col` | 2カラムカード | `col1`, `col2` |
-| `two-col-icon` | 2カラム＋アイコン | `col1-icon`, `col1`, `col2-icon`, `col2` |
-| `cards` | 3カラムカード | `card1`, `card2`, `card3` |
-| `cards-icon` | 3カラム＋アイコン | `card1-icon`, `card1`, ... |
-| `grid2x2` | 2×2グリッド | `card1`〜`card4` |
-| `grid2x2-icon` | 2×2＋アイコン | `card1-icon`, `card1`, ... |
-| `list` | 縦リスト（3項目） | `item1`, `item2`, `item3` |
-| `list-icon` | 縦リスト＋アイコン | `item1-icon`, `item1`, ... |
-| `compare` | 2案比較＋結論 | `col1`, `col2`, `bottom` |
+| レイアウト名 | 説明 | スロット | セパレーター |
+|---|---|---|---|
+| `two-col` | 2カラムカード（アイコン対応） | `cols` | `***` |
+| `cards` | 3カラムカード（アイコン対応） | `items` | `***` |
+| `grid2x2` | 2×2グリッド（アイコン対応） | `items` | `***` |
+| `list` | 縦リスト（アイコン対応） | `items` | `***` |
+| `compare` | 2案比較＋結論 | `cols`（`***`区切り）, `bottom` | `***` |
+| `timeline` | 横並びステップ（番号自動付与） | `steps` | `***` |
+
+### スロットの書き方
+
+アイコンなし:
+```md
+::items::
+## 見出しA
+説明テキスト
+
+***
+
+## 見出しB
+説明テキスト
+```
+
+アイコンあり（先頭に `<img>` を置く。**`<img>` の直後に必ず空行**）:
+```md
+::items::
+<img src="./images/icon.png" />
+
+## 見出しA
+説明テキスト
+
+***
+
+<img src="./images/icon.png" />
+
+## 見出しB
+説明テキスト
+```
+
+> **注意**: `<img>` の直後に空行なしで `## heading` を書くと、markdown-it が両行を HTML ブロックとして処理し `<h2>` が生成されない。
 
 ## テーマ設計
 
-- **カラー**: primary `#6366f1`（インジゴ）、accent `#06b6d4`（シアン）
+- **カラー**: primary `#0ea5e9`（スカイブルー）、accent `#E9D144`（イエロー）
 - **フォント**: Noto Sans JP（本文）、Fira Code（コード）
 - **モード**: ライトモード固定
 - **遷移**: アニメーションなし
@@ -70,7 +100,8 @@ works/                      # スライド置き場
 
 ## 注意
 
-- アイコン付きレイアウトでは `<img>` の `src` はスライド `md` ファイルからの相対パス
+- `<img>` の `src` はスライド `.md` ファイルからの相対パス
+- **`<img>` の直後に必ず空行**を入れる（入れないと `##` が見出しとして解釈されない）
 - グラフの `:height` は明示指定推奨（デフォルト `100%` だとレイアウト崩れの可能性あり）
 
 ## draw.io アーキテクチャ図
