@@ -15,7 +15,7 @@ const cols = computed(() => {
 
 <template>
   <div class="slidev-layout grid">
-    <div class="grid-header"><slot /></div>
+    <slot />
     <div class="grid-body" :style="{ gridTemplateColumns: `repeat(${cols}, 1fr)` }">
       <div v-for="(item, i) in items" :key="i" class="cell">
         <div v-if="item.icon" class="cell-icon">

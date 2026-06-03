@@ -137,6 +137,15 @@
   letter-spacing: -0.02em;
 }
 
+/* ── カスタムレイアウト共通: 補足テキストの色を本文と揃える */
+.slidev-layout.cards > p,
+.slidev-layout.two-col > p,
+.slidev-layout.grid > p,
+.slidev-layout.list > p {
+  color: inherit;
+  opacity: 1;
+}
+
 /* ── Cards layout ───────────────────────────────────────────── */
 .slidev-layout.cards {
   background: #ffffff;
@@ -146,7 +155,7 @@
   flex-direction: column;
 }
 
-.slidev-layout.cards .cards-header h1 {
+.slidev-layout.cards h1 {
   font-size: 2.2rem;
   font-weight: 700;
   color: #1e293b;
@@ -155,19 +164,18 @@
   margin-bottom: 0.75rem;
 }
 
-.slidev-layout.cards .cards-header p {
-  color: #475569;
-  font-size: 1.2rem;
-  margin-bottom: 0;
+.slidev-layout.cards > h1 + * {
+  margin-top: auto;
+}
+
+.slidev-layout.cards > :last-child {
+  margin-bottom: auto;
 }
 
 .slidev-layout.cards .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
-  margin-top: 1.25rem;
-  flex: 1;
-  align-content: center;
 }
 
 .slidev-layout.cards .card {
@@ -178,6 +186,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .slidev-layout.cards .card-icon {
@@ -221,7 +230,7 @@
   flex-direction: column;
 }
 
-.slidev-layout.two-col .two-col-header h1 {
+.slidev-layout.two-col h1 {
   font-size: 2.2rem;
   font-weight: 700;
   color: #1e293b;
@@ -230,19 +239,18 @@
   margin-bottom: 0.75rem;
 }
 
-.slidev-layout.two-col .two-col-header p {
-  color: #475569;
-  font-size: 1.2rem;
-  margin-bottom: 0;
+.slidev-layout.two-col > h1 + * {
+  margin-top: auto;
+}
+
+.slidev-layout.two-col > :last-child {
+  margin-bottom: auto;
 }
 
 .slidev-layout.two-col .two-col-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
-  margin-top: 1.25rem;
-  flex: 1;
-  align-content: center;
 }
 
 .slidev-layout.two-col .col {
@@ -253,6 +261,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .slidev-layout.two-col .col-icon {
@@ -297,7 +306,7 @@
   flex-direction: column;
 }
 
-.slidev-layout.grid .grid-header h1 {
+.slidev-layout.grid h1 {
   font-size: 2.2rem;
   font-weight: 700;
   color: #1e293b;
@@ -306,18 +315,17 @@
   margin-bottom: 0.75rem;
 }
 
-.slidev-layout.grid .grid-header p {
-  color: #475569;
-  font-size: 1.2rem;
-  margin-bottom: 0;
+.slidev-layout.grid > h1 + * {
+  margin-top: auto;
+}
+
+.slidev-layout.grid > :last-child {
+  margin-bottom: auto;
 }
 
 .slidev-layout.grid .grid-body {
   display: grid;
   gap: 1rem;
-  margin-top: 1rem;
-  flex: 1;
-  align-content: center;
 }
 
 .slidev-layout.grid .cell {
@@ -328,6 +336,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .slidev-layout.grid .cell-icon {
@@ -370,7 +379,7 @@
   flex-direction: column;
 }
 
-.slidev-layout.list .list-header h1 {
+.slidev-layout.list h1 {
   font-size: 2.2rem;
   font-weight: 700;
   color: #1e293b;
@@ -379,13 +388,18 @@
   margin-bottom: 0.75rem;
 }
 
+.slidev-layout.list > h1 + * {
+  margin-top: auto;
+}
+
+.slidev-layout.list > :last-child {
+  margin-bottom: auto;
+}
+
 .slidev-layout.list .list-items {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  margin-top: 0.75rem;
-  flex: 1;
-  justify-content: center;
 }
 
 .slidev-layout.list .list-item {

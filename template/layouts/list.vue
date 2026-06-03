@@ -8,7 +8,7 @@ const items = computed(() => splitByHr(slots.items))
 
 <template>
   <div class="slidev-layout list">
-    <div class="list-header"><slot /></div>
+    <slot />
     <div class="list-items">
       <div v-for="(item, i) in items" :key="i" class="list-item">
         <div v-if="item.icon" class="list-icon-wrap">
