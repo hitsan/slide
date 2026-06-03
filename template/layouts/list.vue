@@ -1,26 +1,22 @@
+<script setup>
+import { useSlots, computed } from 'vue'
+import { splitByHr } from '../composables/useSlotItems.js'
+
+const slots = useSlots()
+const items = computed(() => splitByHr(slots.items))
+</script>
+
 <template>
   <div class="slidev-layout list">
-    <div class="list-header">
-      <slot />
-    </div>
+    <div class="list-header"><slot /></div>
     <div class="list-items">
-      <div v-if="$slots['item1']" class="list-item">
-        <div class="list-content"><slot name="item1" /></div>
-      </div>
-      <div v-if="$slots['item2']" class="list-item">
-        <div class="list-content"><slot name="item2" /></div>
-      </div>
-      <div v-if="$slots['item3']" class="list-item">
-        <div class="list-content"><slot name="item3" /></div>
-      </div>
-      <div v-if="$slots['item4']" class="list-item">
-        <div class="list-content"><slot name="item4" /></div>
-      </div>
-      <div v-if="$slots['item5']" class="list-item">
-        <div class="list-content"><slot name="item5" /></div>
-      </div>
-      <div v-if="$slots['item6']" class="list-item">
-        <div class="list-content"><slot name="item6" /></div>
+      <div v-for="(item, i) in items" :key="i" class="list-item">
+        <div v-if="item.icon" class="list-icon-wrap">
+          <component :is="() => [item.icon]" />
+        </div>
+        <div class="list-content">
+          <component :is="() => item.content" />
+        </div>
       </div>
     </div>
   </div>
