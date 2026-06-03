@@ -61,6 +61,17 @@
   background: #ffffff;
   color: #1e293b;
   font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* タイトル(h1)は上に固定し、本文ブロックをスライド縦中央に寄せる */
+.slidev-layout.default > h1 + * {
+  margin-top: auto;
+}
+
+.slidev-layout.default > :last-child {
+  margin-bottom: auto;
 }
 
 .slidev-layout.default h1 {
@@ -156,6 +167,7 @@
   gap: 1.25rem;
   margin-top: 1.25rem;
   flex: 1;
+  align-content: center;
 }
 
 .slidev-layout.cards .card {
@@ -230,6 +242,7 @@
   gap: 1.25rem;
   margin-top: 1.25rem;
   flex: 1;
+  align-content: center;
 }
 
 .slidev-layout.two-col .col {
@@ -304,6 +317,7 @@
   gap: 1rem;
   margin-top: 1rem;
   flex: 1;
+  align-content: center;
 }
 
 .slidev-layout.grid .cell {
@@ -371,6 +385,7 @@
   gap: 0.6rem;
   margin-top: 0.75rem;
   flex: 1;
+  justify-content: center;
 }
 
 .slidev-layout.list .list-item {
@@ -380,7 +395,6 @@
   background: #f0f9ff;
   border-radius: 0.75rem;
   padding: 0.5rem 0.75rem;
-  flex: 1;
 }
 
 .slidev-layout.list .list-icon-wrap {
@@ -440,6 +454,7 @@
   gap: 1.25rem;
   margin-top: 0.75rem;
   flex: 1;
+  align-content: center;
 }
 
 .slidev-layout.compare .compare-col {
@@ -492,7 +507,7 @@
 
 .slidev-layout.timeline .timeline-track {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.25rem;
   margin-top: 0.75rem;
   flex: 1;
