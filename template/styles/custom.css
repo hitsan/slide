@@ -847,6 +847,12 @@
   margin: 0 auto;
 }
 
+/* ── Print / PDF export ─────────────────────────────────────── */
+@page {
+  size: 980px 552px;
+  margin: 0;
+}
+
 /* ── Misc ───────────────────────────────────────────────────── */
 #slidev-goto-dialog {
   display: none !important;

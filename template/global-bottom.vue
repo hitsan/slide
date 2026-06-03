@@ -1,11 +1,11 @@
 <script setup>
-import { useNav } from '@slidev/client'
-const { currentSlideNo } = useNav()
+import { useSlideContext } from '@slidev/client'
+const { $slidev } = useSlideContext()
 </script>
 
 <template>
-  <div v-if="currentSlideNo > 1" class="page-number">
-    {{ currentSlideNo }}
+  <div v-if="$slidev.nav.currentSlideNo > 1" class="page-number">
+    {{ $slidev.nav.currentSlideNo }}
   </div>
 </template>
 
