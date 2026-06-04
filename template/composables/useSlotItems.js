@@ -17,8 +17,10 @@ export function splitByHr(slotFn) {
   return groups.map(group => {
     const first = group.find(v => typeof v.type !== 'symbol')
     const icon = extractIcon(first)
-    if (icon) return { icon, content: group.filter(v => v !== first) }
-    return { icon: null, content: group }
+    const content = icon ? group.filter(v => v !== first) : group
+    const heading = content.find(v => v.type === 'h2') || null
+    const body = content.filter(v => v !== heading)
+    return { icon, heading, body, content }
   })
 }
 

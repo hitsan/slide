@@ -191,13 +191,14 @@
 }
 
 .slidev-layout.cards .card-icon {
-  width: 4rem;
-  height: 4rem;
+  order: 0;
+  width: 5rem;
+  height: 5rem;
   margin: 0 auto 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 4rem;
 }
 
 .slidev-layout.cards .card-icon img {
@@ -207,6 +208,7 @@
 }
 
 .slidev-layout.cards .card h2 {
+  order: -1;
   color: var(--slidev-theme-primary);
   font-size: 1.3rem;
   font-weight: 700;
@@ -266,13 +268,14 @@
 }
 
 .slidev-layout.two-col .col-icon {
-  width: 4rem;
-  height: 4rem;
+  order: 0;
+  width: 5rem;
+  height: 5rem;
   margin: 0 auto 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 4rem;
 }
 
 .slidev-layout.two-col .col-icon img {
@@ -282,6 +285,7 @@
 }
 
 .slidev-layout.two-col .col h2 {
+  order: -1;
   color: var(--slidev-theme-primary);
   font-size: 1.3rem;
   font-weight: 700;
@@ -341,6 +345,7 @@
 }
 
 .slidev-layout.grid .cell-icon {
+  order: 0;
   width: 3rem;
   height: 3rem;
   margin: 0 auto 0.5rem;
@@ -356,6 +361,7 @@
 }
 
 .slidev-layout.grid .cell h2 {
+  order: -1;
   color: var(--slidev-theme-primary);
   font-size: 1.25rem;
   font-weight: 700;
@@ -412,6 +418,20 @@
   padding: 0.5rem 0.75rem;
 }
 
+.slidev-layout.list .list-item.has-icon {
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.slidev-layout.list .list-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 12rem;
+  text-align: center;
+}
+
 .slidev-layout.list .list-icon-wrap {
   width: 3.5rem;
   height: 3.5rem;
@@ -419,6 +439,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 3rem;
 }
 
 .slidev-layout.list .list-icon-wrap img {
@@ -431,11 +452,12 @@
   flex: 1;
 }
 
-.slidev-layout.list .list-content h2 {
+.slidev-layout.list .list-content h2,
+.slidev-layout.list .list-left h2 {
   color: var(--slidev-theme-primary);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.25rem;
 }
 
 .slidev-layout.list .list-content p {
