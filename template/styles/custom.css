@@ -193,7 +193,7 @@
 .slidev-layout.cards .card-icon {
   width: 4rem;
   height: 4rem;
-  margin-bottom: 0.75rem;
+  margin: 0 auto 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -268,7 +268,7 @@
 .slidev-layout.two-col .col-icon {
   width: 4rem;
   height: 4rem;
-  margin-bottom: 0.75rem;
+  margin: 0 auto 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -343,7 +343,7 @@
 .slidev-layout.grid .cell-icon {
   width: 3rem;
   height: 3rem;
-  margin-bottom: 0.5rem;
+  margin: 0 auto 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;

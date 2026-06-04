@@ -131,10 +131,24 @@ export default defineConfig({
 
 > `breaks: true` がないと `.md` の改行がスライド上で無視される。
 
+## アイコンの使い方
+
+利用可能なコレクション: `carbon`（IBM Carbon）、`ph`（Phosphor）、`svg-spinners`
+
+```md
+<CarbonTerminal />
+<PhRobot />
+<SvgSpinnersRing />
+```
+
+- **PascalCase** で書く（`<carbon:terminal />` のコロン記法は Vue テンプレートで無効）
+- アイコンの直後に必ず空行を入れる（`<img>` と同じルール）
+- アイコン名は [icones.js.org](https://icones.js.org) で検索（`carbon`・`ph` で絞り込み）
+
 ## 注意
 
 - `<img>` の `src` はスライド `.md` ファイルからの相対パス
-- **`<img>` の直後に必ず空行**を入れる（入れないと `##` が見出しとして解釈されない）
+- **`<img>` またはアイコンの直後に必ず空行**を入れる（入れないと `##` が見出しとして解釈されない）
 - グラフの `:height` は明示指定推奨（デフォルト `100%` だとレイアウト崩れの可能性あり）
 
 ## スライドコンテンツ規則
