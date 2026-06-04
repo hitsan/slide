@@ -111,7 +111,25 @@ works/                         # スライド置き場
 
 1. `works/<topic>/` ディレクトリを作成
 2. `slides.md` を置き、フロントマターで `theme: ../../template` を指定
-3. `npm run dev works/<topic>/slides.md` で起動
+3. `vite.config.ts` を作成（改行を有効化するために必須）
+4. `npm run dev works/<topic>/slides.md` で起動
+
+`vite.config.ts` のテンプレート:
+```ts
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  slidev: {
+    markdown: {
+      markdownItOptions: {
+        breaks: true,
+      },
+    },
+  },
+} as any)
+```
+
+> `breaks: true` がないと `.md` の改行がスライド上で無視される。
 
 ## 注意
 
@@ -123,13 +141,17 @@ works/                         # スライド置き場
 
 - **句点（。）禁止** — 文末に句点を使わない
 - **体言止め** — 箇条書きや説明文は名詞・体言で終わらせる
-- **改行は意味の区切りで** — 行が長くなる場合のみ `<br>` を使う。助詞・接続語の直後など不自然な位置では改行しない
-- **長すぎる行は言い換え** — `<br>` を入れても不自然になる場合は、表現を変えて短くする
+- **1文1行** — 1文が1行に収まるように書く。カンマで繋がる長い文は複数の短い文に分ける
+- **情報密度を高める** — 各アイテム・カラムには句を複数入れる。1句だけで終わらせない
+- **意味の区切りで改行** — 助詞・接続語の直後など不自然な位置では改行しない
 - **レイアウト別の1行文字数目安**（日本語全角換算）:
   - `cards` / `grid` 3列: **12文字**
   - `two-col` / `compare` 2列（`p` テキスト）: **20文字**
   - `two-col` / `compare` 2列（`li` アイテム）: **15文字**（bullet indent 分だけ狭い）
   - `list`: 制限なし（40文字以上入る）
+- **アイテムあたりの行数目安**:
+  - `list` アイテム: **3行**（超えるとはみ出す恐れあり）
+  - `cards` / `two-col` / `compare`: **3行以内**推奨
 
 ## draw.io アーキテクチャ図
 
