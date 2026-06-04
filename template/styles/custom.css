@@ -72,7 +72,7 @@
 }
 
 .slidev-layout.default > :last-child {
-  margin-bottom: auto;
+  margin-bottom: auto !important;
 }
 
 .slidev-layout.default h1 {
@@ -467,9 +467,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
-  margin-top: 0.75rem;
-  flex: 1;
-  align-content: center;
+  margin-top: auto;
+}
+
+.slidev-layout.compare > :last-child {
+  margin-bottom: auto;
 }
 
 .slidev-layout.compare .compare-col {
